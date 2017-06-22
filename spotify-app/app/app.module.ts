@@ -9,6 +9,7 @@ import { AppComponent } from './app.component'
 import { AboutComponent } from './component/about/about.component'
 import { ContactComponent } from './component/about/contact.component'
 import { NavbarComponent } from './component/navbar/navbar.component'
+import { SearchComponent } from './component/search/search.component'
 
 // Calling services
 import { SpotifyService } from './services/spotify.services'
@@ -21,7 +22,8 @@ import { appRouteProviders } from './app.router'
         AppComponent,
         NavbarComponent,
         AboutComponent,
-        ContactComponent
+        ContactComponent,
+        SearchComponent
     ],
 
     imports: [

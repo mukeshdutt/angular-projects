@@ -1,0 +1,16 @@
+<div class="col-md-8 col-md-offset-2">
+    <h1>Need Music?</h1>
+    <p class="lead">Use the ng2 Spotify app to browse new releases and find your favorite songs.</p>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <input type="text" name="searchbar" [(ngModel)]="search.text" (keyup)="SearchMusic()" class="form-control" placeholder="Search Music...">
+        </div>
+    </form>
+</div>
+
+<div>
+    <p *ngFor="let record of records">
+        {{record}}
+    </p>
+</div>
