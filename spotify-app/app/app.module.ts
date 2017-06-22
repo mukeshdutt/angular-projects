@@ -8,14 +8,30 @@ import { HttpModule } from '@angular/http'
 // calling components
 import { AppComponent } from './app.component'
 import { AboutComponent } from './component/about/about.component'
+import { ContactComponent } from './component/about/contact.component'
 import { NavbarComponent } from './component/navbar/navbar.component'
 
 // Calling services
 import { SpotifyService } from './services/spotify.services'
 
+// calling routing
+import { appRouteProviders } from './app.router'
+
 @NgModule({
-    declarations: [AppComponent, NavbarComponent, AboutComponent],
-    imports: [BrowserModule, HttpModule, FormsModule, RouterModule],
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        AboutComponent,
+        ContactComponent
+    ],
+
+    imports: [
+        BrowserModule,
+        HttpModule,
+        FormsModule,
+        appRouteProviders
+    ],
+
     bootstrap: [AppComponent],
     providers: [SpotifyService]
 })
