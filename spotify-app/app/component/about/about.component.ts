@@ -4,7 +4,9 @@ import { Component } from '@angular/core'
     selector: 'about',
     template: `
         <div class="col-md-8 col-md-offset-2"> 
-            <h2>About Us</h2> <br />          
+            <h2>About ng2Spotify</h2>
+            <h3>Version 1.0</h3>
+            <p>This is an angular 2 app that uses the spotify web api to find artists and display albums and track listing.</p>          
         </div>
     `,
     styles: [``]

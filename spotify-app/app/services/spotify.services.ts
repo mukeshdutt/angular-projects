@@ -5,7 +5,7 @@ import { Http, Headers } from '@angular/http'
 export class SpotifyService {
 
     baseUrl: string = 'https://api.spotify.com/v1/';
-    accessToken: string = 'BQDy3HV-qWAXKMtXt6AzhL6TOBA7epnaC2ySgIIJmfJ8j2CWmXXaf6nQ48DaVLJ-O_a6CoR5XIUlgDCEdaljCvfpiaSmaYsIo6tszj2YQq6XkFBhwdgeV3_kWoNWvjzwONekceHTnf-awGUaWdgXAX8aKXb683o';
+    accessToken: string = 'BQB1NaVGD4xlSV9QiAhxow_Y95oRG32ixsFGq97CvQrk9mlNPoJHbnTWLfT67FsEcx-iWzXkZM4VUoFrwbBwnTv4B0Pzwd1OPYgoLOr91AvzvWGGxTNijJWjwmuxYIrvByJUPxctu0Ac5LdiMURor7L-md2YUac';
 
     constructor(private http: Http) { }
 
@@ -40,6 +40,17 @@ export class SpotifyService {
         let headers = new Headers();
         this.createAuthorizationHeader(headers);
         return this.http.get(this.baseUrl + "artists/" + id + '/albums',
+            {
+                headers: headers
+            }
+        );
+    }
+    
+    getAlbumsDetails(id: string) {
+
+        let headers = new Headers();
+        this.createAuthorizationHeader(headers);
+        return this.http.get(this.baseUrl + "albums/" + id,
             {
                 headers: headers
             }

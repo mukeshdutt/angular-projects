@@ -11,6 +11,8 @@ import { ContactComponent } from './component/about/contact.component'
 import { NavbarComponent } from './component/navbar/navbar.component'
 import { SearchComponent } from './component/search/search.component'
 import { ArtistComponent } from './component/artist/artist.component'
+import { AlbumComponent } from './component/album/album.component'
+
 
 // Calling services
 import { SpotifyService } from './services/spotify.services'
@@ -25,7 +27,8 @@ import { appRouteProviders } from './app.router'
         AboutComponent,
         ContactComponent,
         SearchComponent,
-        ArtistComponent
+        ArtistComponent,
+        AlbumComponent
     ],
 
     imports: [
