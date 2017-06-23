@@ -12,8 +12,8 @@ import { Artist } from '../../model/artist'
 export class ArtistComponent implements OnInit {
 
     id: string;
-    name: string;
-    artist: Artist[];
+    artist: any;
+    albums: any;
 
     constructor(private route: ActivatedRoute, private spotifyService: SpotifyService) { }
 
@@ -22,9 +22,15 @@ export class ArtistComponent implements OnInit {
         this.route.params.subscribe(params => {
 
             this.id = params["id"];
+
+            // getting artist information
             this.spotifyService.getArtist(this.id).subscribe(res => {
                 this.artist = res.json();
-                console.log(this.artist);
+            });
+
+            // getting all albums
+            this.spotifyService.getAlbums(this.id).subscribe(res => {
+                this.albums = res.json().items;
             });
         });
     }
