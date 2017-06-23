@@ -1,23 +1,31 @@
 <div *ngIf="artist">
 
-    <div class="col-md-10 col-md-offset-2">
+    <div class="col-md-10 col-md-offset-1">
         <header class="artist-header">
-            <div *ngIf="artist.images.length > 0">                
+            <div *ngIf="artist.images.length > 0">
                 <img class="artist-thumb img-circle" src="{{artist.images[0].url}}">
             </div>
-        </header>
-        <h1>{{artist.name}}</h1>
-        <p *ngIf="artist.genres.length > 0">
-            <span *ngFor="let genre of artist.genres">{{ genre }}</span>
-        </p>
-    </div>
 
-    <div class="artist-albums">
-        <div class="row">
-            <div *ngFor="let album of albums">
-                {{ album.name }}
+            <h1>{{artist.name}}</h1>
+            <p *ngIf="artist.genres.length > 0">
+                <span *ngFor="let genre of artist.genres">{{ genre }}</span>
+            </p>
+        </header>
+
+        <div class="artist-albums">
+            <div class="row">
+                <div *ngFor="let album of albums">
+                    <div class="col-md-3">
+                        <div class="well album">
+                            <div *ngIf="album.images.length > 0">
+                                <img class="album-thumb img-thumbnail" src="{{album.images[0].url}}">
+                                <h3>{{album.name}}</h3>
+                                <a href="#" class="btn btn-default btn-block">Album Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
