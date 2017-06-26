@@ -1,0 +1,36 @@
+{
+  "name": "angular-forms",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
+  },
+  "dependencies": {
+    "@angular/core": "~2.4.10",
+    "@angular/common": "~2.4.10",
+    "@angular/compiler": "~2.4.10",
+    "@angular/http": "~2.4.10",
+    "@angular/router": "~3.4.10",
+    "@angular/forms": "~2.4.10",
+    "@angular/platform-browser": "~2.4.10",
+    "@angular/platform-browser-dynamic": "~2.4.10",
+    "angular-in-memory-web-api": "~0.3.1",
+    "systemjs": "~0.20.10",
+    "reflect-metadata": "~0.1.10",
+    "zone.js": "~0.8.4",
+    "core-js": "~2.4.1",
+    "rxjs": "~5.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "~3.4.0",
+    "typescript": "~2.2.1",
+    "lite-server": "~2.3.0",
+    "@types/node": "^6.0.46",
+    "@types/jasmine": "~2.5.36"
+  },
+  "author": "",
+  "license": "ISC"
+}
