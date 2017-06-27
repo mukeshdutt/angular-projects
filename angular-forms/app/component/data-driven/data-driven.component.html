@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+
+        <h1> Data Driven Approach </h1>
+
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+            <div formGroupName="userData">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" formControlName="username">
+                    <div *ngIf="!myForm.controls.userData.controls.username.valid">
+                    Empty username
+                </div> 
+                </div>
+
+                <div class="form-group">
+                    <label for="username">E-mail</label>
+                    <input type="email" class="form-control" id="email" formControlName="email">
+                    <div *ngIf="!myForm.controls.userData.controls.email.valid">
+                    Empty email
+                </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" formControlName="password">
+                <!--<div *ngIf="!myForm.controls.password.valid">
+                    Empty Password
+                </div>-->
+            </div>
+
+            <h2>Hobbies</h2>
+            <br>
+
+            <div class="form-group">
+                <label for="Hobby">Hobby</label>
+                <input type="text" class="form-control" id="hobby">
+            </div>
+
+            <button class="btn btn-default" type="submit">Add Hobby</button>
+            <button class="btn btn-success" type="submit" [disabled]="!myForm.valid">Submit</button>
+        </form>
+    </div>
+</div>
